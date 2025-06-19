@@ -25,7 +25,7 @@ def compute_mar(landmarks, w, h):
 
 def main(source, threshold):
     is_webcam = source is None
-    cap = cv2.VideoCapture(1 if is_webcam else source, cv2.CAP_AVFOUNDATION)
+    cap = cv2.VideoCapture(0 if is_webcam else source, cv2.CAP_AVFOUNDATION)
 
     if not cap.isOpened():
         raise RuntimeError(f"Cannot open {'webcam' if is_webcam else f'video: {source}'}")

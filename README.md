@@ -8,7 +8,7 @@
 
 **Real-time mouth open detection using multiple AI methods with web interface**
 
-[🚀 Quick Start](#-quick-start) • [🔧 Features](#-features) • [📦 Installation](#-installation) • [🎮 Usage](#-usage) • [🛠️ Development](#️-development)
+[✨ Features](#-features) • [🚀 Quick Start](#-quick-start) • [🎮 Usage](#-usage) • [🗂️ Database Schema](#️-database-schema) • [🛠️ Development](#️-development)
 
 </div>
 
@@ -72,7 +72,7 @@ Open your browser and go to: **http://localhost:8501**
 
 ---
 
-## 🎮 Usage Guide
+## 🎮 Usage
 
 ### 1. **Authentication**
 - Register with your email and password

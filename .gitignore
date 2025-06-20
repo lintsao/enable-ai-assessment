@@ -1,1 +1,24 @@
-src/__pycache__
+# Model weights (large files)
+model_weights/
+
+# Database files
+*.db
+
+# Python
+__pycache__/
+
+# Virtual environments
+venv/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,5 +1,6 @@
 import cv2
 
+
 def list_cameras(max_index=10):
     cams = []
     for i in range(max_index):
@@ -10,6 +11,7 @@ def list_cameras(max_index=10):
         cams.append(i)
         cap.release()
     return cams
+
 
 if __name__ == "__main__":
     available = list_cameras()
@@ -31,4 +33,3 @@ if __name__ == "__main__":
         cv2.waitKey(0)
         cv2.destroyAllWindows()
     cap.release()
-

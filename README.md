@@ -42,7 +42,7 @@
 ### 1. Clone & Setup
 ```bash
 git clone https://github.com/lintsao/enable-ai-assessment.git
-cd EnableAI
+cd enable-ai-assessment
 ```
 
 ### 2. Install Dependencies

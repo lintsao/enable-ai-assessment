@@ -388,7 +388,7 @@ def main():
             st.sidebar.markdown(f"- **Model:** DLib + Facial Landmarks")
             st.sidebar.markdown(f"- **Metric:** MAR (Mouth Aspect Ratio)")
         else:
-            st.sidebar.markdown(f"- **Model:** MediaPipe + dlib")
+            st.sidebar.markdown(f"- **Model:** MediaPipe + Facial Landmarks")
             st.sidebar.markdown(f"- **Metric:** MAR (Mouth Aspect Ratio)")
 
         # Only show streamer when detection method is available

@@ -76,7 +76,7 @@ class DLibMouthDetector:
             # No face detected
             cv2.putText(
                 frame,
-                "No face detected",
+                "",
                 (TEXT_POSITION_X, TEXT_POSITION_Y_STATE),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 FONT_SCALE,

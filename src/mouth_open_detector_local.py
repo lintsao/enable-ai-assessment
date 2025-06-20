@@ -16,12 +16,12 @@ def main():
         default=None,
         help="Path to video file; if omitted, use webcam",
     )
-    parser.add_argument("--threshold", type=float, default=0.5, help="MAR threshold")
+    parser.add_argument("--threshold", type=float, default=0.4, help="MAR threshold")
     args = parser.parse_args()
 
     detector = MouthOpenDetector(threshold=args.threshold)
     is_cam = args.video is None
-    cap = cv2.VideoCapture(0 if is_cam else args.video, cv2.CAP_AVFOUNDATION)
+    cap = cv2.VideoCapture(1 if is_cam else args.video, cv2.CAP_AVFOUNDATION)
     if not cap.isOpened():
         raise RuntimeError(f"Cannot open {'webcam' if is_cam else args.video}")
     prev = time.time()

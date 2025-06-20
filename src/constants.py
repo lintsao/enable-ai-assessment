@@ -30,9 +30,9 @@ COLOR_UNKNOWN = (128, 128, 128)  # Gray for unknown state
 COLOR_WHITE = (255, 255, 255)  # White for text
 
 # ----------- Threshold Defaults -----------
-DEFAULT_ONNX_THRESHOLD = 0.5
-DEFAULT_MEDIAPIPE_THRESHOLD = 0.2
-DEFAULT_DLIB_THRESHOLD = 0.3
+DEFAULT_ONNX_THRESHOLD = 0.65
+DEFAULT_MEDIAPIPE_THRESHOLD = 0.4
+DEFAULT_DLIB_THRESHOLD = 0.5
 
 # ----------- Session State Keys -----------
 SESSION_KEYS = {

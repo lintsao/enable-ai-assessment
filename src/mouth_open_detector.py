@@ -83,7 +83,6 @@ def compute_mar_v2(landmarks, w: int, h: int) -> float:
     def pt(idx):
         return np.array([landmarks[idx].x * w, landmarks[idx].y * h])
 
-    # 多點平均
     upper_idxs = [13, 82, 312]
     lower_idxs = [14, 87, 317]
     upper_mean = np.mean([pt(i) for i in upper_idxs], axis=0)

@@ -12,6 +12,7 @@
 
 </div>
 
+![Mouth Open Detection Demo](./demo/demo.gif)
 ---
 
 ## ✨ Features

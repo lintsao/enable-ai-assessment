@@ -6,7 +6,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.30.0-red.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.9.0-green.svg)
 
-**Real-time mouth open detection using multiple AI methods with beautiful web interface**
+**Real-time mouth open detection using multiple AI methods with web interface**
 
 [🚀 Quick Start](#-quick-start) • [🔧 Features](#-features) • [📦 Installation](#-installation) • [🎮 Usage](#-usage) • [🛠️ Development](#️-development)
 
@@ -22,22 +22,12 @@
 - **Dlib**: Facial landmark-based detection
 
 ### 🌐 **Real-time Web Interface**
-- Beautiful Streamlit UI with real-time video streaming
+- Streamlit UI with real-time video streaming
 - User authentication system (login/register)
-- Live detection results overlay
 - Adjustable thresholds for each method
 
 ### 📊 **Data Logging**
 - Automatic database logging of detection results
-- User session management
-- Detection method and camera information tracking
-- Historical data analysis
-
-### 🎨 **Modern UI/UX**
-- Responsive design with sidebar controls
-- Real-time FPS and confidence display
-- Color-coded detection states
-- Professional styling
 
 ---
 
@@ -50,30 +40,26 @@
 
 ### 1. Clone & Setup
 ```bash
-git clone <repository-url>
+git clone https://github.com/lintsao/enable-ai-assessment.git
 cd EnableAI
 ```
 
 ### 2. Install Dependencies
 ```bash
 ./setup.sh
-source "mouth_open_detector/bin/activate"
-pip install -r requirements.txt
+source mouth_open_detector/bin/activate
 ```
 
 ### 3. Download Models
 ```bash
-# Create models directory
 mkdir -p model_weights
-
-# Download Dlib model
-curl -O http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
-bzip2 -d shape_predictor_68_face_landmarks.dat.bz2
-mv shape_predictor_68_face_landmarks.dat model_weights/
-
-# Ensure ONNX model is in place
-# yawn_model_80.onnx should be in model_weights/
 ```
+
+- Download Dlib model from http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2 and follow the instructions to extract the file
+
+- Download ONNX model from https://github.com/iglaweb/HippoYD/blob/master/out_epoch_80_full/yawn_model_80.onnx
+
+- ```shape_predictor_68_face_landmarks.dat.bz2``` and ```yawn_model_80.onnx``` should be in ```model_weights/```
 
 ### 4. Run Application
 ```bash
@@ -108,7 +94,7 @@ Choose from three available methods:
 
 ---
 
-## 🔧 Database Schema
+## 🗂️ Database Schema
 ```sql
 mouth_state (
     id, timestamp, email, state, mar, 
@@ -132,6 +118,7 @@ EnableAI/
 │   ├── db_utils.py         # Database utilities
 │   ├── dlib_mouth_detector.py
 │   ├── mouth_open_detector.py
+│   ├── mouth_open_detector_local.py
 │   └── mouth_open_detector_streamlit_combined.py
 ├── requirements.txt        # Dependencies
 ├── Makefile               # Development commands
@@ -146,16 +133,6 @@ make lint       # Run linting (flake8)
 make check      # Format + lint
 make clean      # Clean generated files
 ```
-
----
-
-## 🙏 Acknowledgments
-
-- **OpenCV** for computer vision capabilities
-- **MediaPipe** for facial landmark detection
-- **Dlib** for facial landmark detection
-- **Streamlit** for the beautiful web interface
-- **ONNX Runtime** for model inference
 
 ---
 
